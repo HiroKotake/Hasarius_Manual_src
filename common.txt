@@ -1,0 +1,11 @@
+#div // トップボックス
+@include top_box.txt
+##
+#div // メインボックス
+#div // 目次ボックス
+@include side_index.txt
+##
+#div // 本文ボックス
+#FILE#
+##
+##
