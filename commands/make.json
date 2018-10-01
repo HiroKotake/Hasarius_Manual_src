@@ -16,22 +16,19 @@
         "Refresh": "300",
         "Jump": "60;https://www.teleios.jp/sample/",
         "Keywords": "ホームページ,HTML,CSS,JavaScript",
-        "Description": "文書にHTML生成に必要なアイテムを追加し、HTMLを生成します。",
+        "Description": "Hasariusコマンド系列タグマニュアル",
         "Robots": "ALL",
         "Author": "Takahiro Kotake",
         "ReplyTo": "info_hasarius&#64;teleios.jp",
         "Copyright": "teleios",
         "Generator": "hasarius",
-        "Date": "2018-08-31T12:00:00+09:00"
+        "Date": "2018-10-01T18:00:00+09:00"
     },
     "Script": [
-        {"type":"", "src":""},
-        {"src":""}
     ],
     "Link": [
-        {"rel":"", "href":""}
     ],
-    "WriteTargetDir": ".",
+    "WriteTargetDir": "../../Hasarius_Manual/commands",
     "UseHashFileName": 0,
     "AutoHashFileName": 0,
     "HashedFileName": "",

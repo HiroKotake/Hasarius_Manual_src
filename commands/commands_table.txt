@@ -1,4 +1,4 @@
-table
+#h1 table (略：tbl)
 #hr
 #h2 用途
 ブロックタイプ： BLOCK
@@ -55,7 +55,7 @@ table
 ##
 +
 | border
-| NC
+| ONE_NULL
 | △
 | △
 | △
@@ -63,8 +63,8 @@ table
 | △
 | △
 | △
-| ×
-| ×
+| △
+| △
 | <説明>
 ##
 +
