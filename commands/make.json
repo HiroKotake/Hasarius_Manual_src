@@ -1,0 +1,41 @@
+{
+    "DocumentType": "HTML5",
+    "BasePosittion": "head",
+    "Language": "ja",
+    "prefix": [
+    ],
+    "Charset": "utf-8",
+    "Title": "Default Page",
+    "Meta": {
+        "ContentType": "text/html; charset=UTF-8",
+        "Pragma": "no-cache",
+        "CacheControl": "no-cache",
+        "Expires": "86400",
+        "ContentScriptType": "text/javascript",
+        "ContentStyleType": "text/css",
+        "Refresh": "300",
+        "Jump": "60;https://www.teleios.jp/sample/",
+        "Keywords": "ホームページ,HTML,CSS,JavaScript",
+        "Description": "文書にHTML生成に必要なアイテムを追加し、HTMLを生成します。",
+        "Robots": "ALL",
+        "Author": "Takahiro Kotake",
+        "ReplyTo": "info_hasarius&#64;teleios.jp",
+        "Copyright": "teleios",
+        "Generator": "hasarius",
+        "Date": "2018-08-31T12:00:00+09:00"
+    },
+    "Script": [
+        {"type":"", "src":""},
+        {"src":""}
+    ],
+    "Link": [
+        {"rel":"", "href":""}
+    ],
+    "WriteTargetDir": ".",
+    "UseHashFileName": 0,
+    "AutoHashFileName": 0,
+    "HashedFileName": "",
+    "AttributeValidate": 1,
+    "ValidateStop": 0,
+    "ShowComment": 1
+}
