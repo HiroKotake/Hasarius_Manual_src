@@ -1,0 +1,38 @@
+{
+    "DocumentType": "HTML5",
+    "BasePosittion": "head",
+    "Language": "ja",
+    "prefix": [
+    ],
+    "Charset": "utf-8",
+    "Title": "Default Page",
+    "Meta": {
+        "ContentType": "text/html; charset=UTF-8",
+        "Pragma": "no-cache",
+        "CacheControl": "no-cache",
+        "Expires": "86400",
+        "ContentScriptType": "text/javascript",
+        "ContentStyleType": "text/css",
+        "Refresh": "300",
+        "Jump": "60;https://www.teleios.jp/sample/",
+        "Keywords": "ホームページ,HTML,CSS,JavaScript",
+        "Description": "Hasarius修飾コマンド系列タグマニュアル",
+        "Robots": "ALL",
+        "Author": "Takahiro Kotake",
+        "ReplyTo": "info_hasarius&#64;teleios.jp",
+        "Copyright": "teleios",
+        "Generator": "hasarius",
+        "Date": "2018-10-01T18:00:00+09:00"
+    },
+    "Script": [
+    ],
+    "Link": [
+    ],
+    "WriteTargetDir": "../../Hasarius_Manual/decorations",
+    "UseHashFileName": 0,
+    "AutoHashFileName": 0,
+    "HashedFileName": "",
+    "AttributeValidate": 1,
+    "ValidateStop": 0,
+    "ShowComment": 1
+}
