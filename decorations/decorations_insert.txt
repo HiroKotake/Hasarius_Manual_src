@@ -1,0 +1,64 @@
+#h1 insert (略：ins)
+#hr
+#h2 用途
+ブロックタイプ： INLINE
+
+#h2 利用可能なHTMLのバージョン
+このタグの利用可能なHTMLのバージョンは以下のものです。
+#pre
+    HTML4_LOOSE, HTML4_STRICT, HTML4_FRAME, XHTML1_LOOSE, XHTML1_STRICT, XHTML1_FRAME, XHTML1_1, HTML5, HTML5_1
+##
+#h2 属性について
+このタグではHTMLで定義されているグローバル属性以外に以下の属性が使用可能です。
+#tbl border=""
++
+! 属性名
+! 属性値
+! HTML4_LOOSE
+! HTML4_STRICT
+! HTML4_FRAME
+! XHTML1_LOOSE
+! XHTML1_STRICT
+! XHTML1_FRAME
+! XHTML1_1
+! HTML5
+! HTML5_1
+! 説明
+##
++
+| cite
+| 文字列
+| 〇
+| 〇
+| 〇
+| 〇
+| 〇
+| 〇
+| 〇
+| 〇
+| 〇
+| URIを設定する<br>
+##
++
+| datetime
+| <説明を参照>
+| △
+| △
+| △
+| △
+| △
+| △
+| △
+| △
+| △
+| 'YYYY-MM-DDThh:mm:ssTZD'を設定する。<br>YYYY = 年<br>MM = 月<br>DD = 日<br>T = （固定）<br>hh = 時<br>mm = 分<br>ss = 秒<br>TZD = +09:00（日本）<br>
+##
+##
+"×" ... 使用不可
+"〇" ... 必須
+"△" ... 任意
+"▲" ... 非推奨
+
+
+#h2 サンプル
+

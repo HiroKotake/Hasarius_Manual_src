@@ -46,6 +46,7 @@ nav
 noframes
 noscript
 object
+ol_listitem
 ol_tdata
 ol_theader
 optgroup

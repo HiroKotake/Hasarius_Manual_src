@@ -1,0 +1,50 @@
+#h1 blockquote (略：bq)
+#hr
+#h2 用途
+ブロックタイプ： BLOCK
+
+#h2 利用可能なHTMLのバージョン
+このタグの利用可能なHTMLのバージョンは以下のものです。
+#pre
+    HTML4_LOOSE, HTML4_STRICT, HTML4_FRAME, XHTML1_LOOSE, XHTML1_STRICT, XHTML1_FRAME, XHTML1_1, HTML5, HTML5_1
+##
+#h2 属性について
+このタグではHTMLで定義されているグローバル属性以外に以下の属性が使用可能です。
+#tbl border=""
++
+! 属性名
+! 属性値
+! HTML4_LOOSE
+! HTML4_STRICT
+! HTML4_FRAME
+! XHTML1_LOOSE
+! XHTML1_STRICT
+! XHTML1_FRAME
+! XHTML1_1
+! HTML5
+! HTML5_1
+! 説明
+##
++
+| cite
+| 文字列
+| △
+| △
+| △
+| △
+| △
+| △
+| △
+| △
+| △
+| URIを設定する<br>
+##
+##
+"×" ... 使用不可
+"〇" ... 必須
+"△" ... 任意
+"▲" ... 非推奨
+
+
+#h2 サンプル
+
