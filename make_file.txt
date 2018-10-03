@@ -1,0 +1,209 @@
+// make.jsonの内容
+#tbl border=""
+#caption make.jsonで記述する項目について
+#thead
++
+! 項目名
+! 小項目
+! 説明
+##
+##
++
+! DocumentType
+| &lt;none&gt;
+#td
+生成するHTMLのドキュメントタイプを指定する。指定する種別は以下に従う。
+
+#tbl
++
+| HTML4_LOOSE
+| :&nbsp;
+##
++
+| HTML4_STRICT
+| :&nbsp;
+##
++
+| HTML4_FRAME
+| :&nbsp;
+##
++
+| XHTML1_LOOSE
+| :&nbsp;
+##
++
+| XHTML1_STRICT
+| :&nbsp;
+##
++
+| XHTML1_FRAME
+| :&nbsp;
+##
++
+| XHTML1_1
+| :&nbsp;
+##
++
+| HTML5
+| :&nbsp;HTML5として生成
+##
++
+| HTML5_1
+| :&nbsp;HTML5.1として生成
+##
+##
+##
+##
++
+! BasePosittion
+| &lt;none&gt;
+| head
+##
++
+! Language
+| &lt;none&gt;
+| ja
+##
++
+! prefix
+| og
+| http://ogp.me/ns#
+##
++
+! Charset
+| &lt;none&gt;
+| utf-8
+##
++
+! Title
+| &lt;none&gt;
+| Default Page
+##
++
+! rowspan="17" Meta
+| colspan="2" @b metaタグを設定する@
+##
++
+| ContentType
+| text/html; charset=UTF-8
+##
++
+| Pragma
+| no-cache
+##
++
+| CacheControl
+| no-cache
+##
++
+| Expires
+| 86400
+##
++
+| ContentScriptType
+| text/javascript
+##
++
+| ContentStyleType
+| text/css
+##
++
+| Refresh
+| 300
+##
++
+| Jump
+| 60;https://www.teleios.jp/sample/
+##
++
+| Keywords
+| ホームページ,HTML,CSS,JavaScript
+##
++
+| Description
+| 文書にHTML生成に必要なアイテムを追加し、HTMLを生成します。
+##
++
+| Robots
+| ALL
+##
++
+| Author
+| Takahiro Kotake
+##
++
+| ReplyTo
+| info_hasarius&#64;teleios.jp
+##
++
+| Copyright
+| teleios
+##
++
+| Generator
+| hasarius
+##
++
+| Date
+| 2018-08-31T12:00:00+09:00
+##
++
+! rowspan="3" Script
+| colspan="2" @b 読み込むスクリプトファイルを指定する@
+##
++
+| type
+|
+##
++
+| src
+|
+##
++
+! rowspan="3" Link
+| colspan="2" @b CSS等のスクリプト以外に読み込むファイルを指定する@
+##
++
+| rel
+|
+##
++
+| href
+|
+##
++
+! WriteTargetDir
+| &lt;none&gt;
+| /var/www/html/test
+##
++
+! UseHashFileName
+| &lt;none&gt;
+| 0
+##
++
+! AutoHashFileName
+| &lt;none&gt;
+| 0
+##
++
+! HashedFileName
+| &lt;none&gt;
+|
+##
++
+! AttributeValidate
+| &lt;none&gt;
+| 1
+##
++
+! ValidateStop
+| &lt;none&gt;
+| 0
+##
++
+! ShowComment
+| &lt;none&gt;
+| 1
+##
+##

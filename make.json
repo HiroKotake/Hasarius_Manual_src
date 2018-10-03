@@ -24,7 +24,7 @@
     "Link": [
         {"rel":"", "href":""}
     ],
-    "WriteTargetDir": "/var/www/html/test",
+    "WriteTargetDir": "../Hasarius_Manual",
     "UseHashFileName": 0,
     "AutoHashFileName": 0,
     "HashedFileName": "",

@@ -1,0 +1,10 @@
+#div id="topBox"
+##
+#div id="mainBox"
+#div id="leftBox"
+@include "./side_index.txt"
+##
+#div id="right_box"
+@include "./manual.txt"
+##
+##
