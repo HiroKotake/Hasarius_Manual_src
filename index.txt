@@ -1,4 +1,5 @@
 #div id="topBox"
+@span style="color:red;" Hasarius マニュアル@
 ##
 #div id="mainBox"
 #div id="leftBox"

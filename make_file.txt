@@ -57,79 +57,154 @@
 +
 ! BasePosittion
 | &lt;none&gt;
+#td
+prefix, langの設定位置<br>HTML5以外では"head"を指定しても"html"で定義<br>
+#tbl
++
+| html
+| :&nbsp;&lt;html&gt;タグにprefix,langを設定
+##
++
 | head
+| :&nbsp;&lt;head&gt;タグにprefix,langを設定
+##
+##
 ##
 +
 ! Language
 | &lt;none&gt;
-| ja
+| 使用する言語に関する設定を記述
 ##
 +
 ! prefix
 | og
-| http://ogp.me/ns#
+| OGPに関する情報を列挙する
 ##
 +
 ! Charset
 | &lt;none&gt;
-| utf-8
+| 使用するキャラクタセットを記述。<br>meta content-typeと排他使用<br>charset属性はHTML5以降なので、それ以外はcontent-typeで代用する
 ##
 +
 ! Title
 | &lt;none&gt;
-| Default Page
+| 生成するHTMLドキュメントのページタイトルを設定する。<br>コマンドライン上で"title"引数をつけた場合はコマンドライン側が優先される
 ##
 +
-! rowspan="17" Meta
+! rowspan="16" Meta
 | colspan="2" @b metaタグを設定する@
 ##
 +
 | ContentType
-| text/html; charset=UTF-8
+| 文書の文字コードを指定<br>charsetとは排他使用<br>ex)&nbsp;text/html; charset=UTF-8
 ##
 +
 | Pragma
-| no-cache
+| 文書がキャッシュされないように指定する場合に設定<br>ex)&nbsp;no-cache
 ##
 +
 | CacheControl
+#td
+キャッシュのコントロールに関する設定を記述。内容については以下のいずれかを設定
+#tbl
++
+| must-revalidate
+| :&nbsp;キャッシュが期限切れだった場合、オリジンサーバでの確認無しにキャッシュを利用してはならない
+##
++
 | no-cache
+| :&nbsp;オリジンサーバでの確認無しにキャッシュを利用してはならない
+##
++
+| no-store
+| :&nbsp;リクエスト、レスポンスの一切を保存してはならない
+##
++
+| no-transform
+| :&nbsp;中継者は形式変換してはならない（画像の再圧縮等を防ぐ）
+##
++
+| public
+| :&nbsp;複数ユーザーで共有できるようにキャッシュしてよい（主にキャッシュサーバ）
+##
++
+| private
+| :&nbsp;特定ユーザーだけが使えるようにキャッシュしてよい（主にブラウザ）
+##
++
+| proxy-revalidate
+| :&nbsp;privateキャッシュには適用されないことを除き、must-revalidateと同じ
+##
++
+| max-age
+| :&nbsp;キャッシュの有効期限を設定する（秒数）
+##
++
+| s-maxage
+| :&nbsp;共有キャッシュにおいて、max-ageディレクティブまたはExpiresヘッダで指定された値を上書きする
+##
+##
+##
 ##
 +
 | Expires
-| 86400
+| キャッシュの有効期限を指定
 ##
 +
 | ContentScriptType
-| text/javascript
+| 基準となるスクリプト言語を指定<br>ex)&nbsp;text/javascript
 ##
 +
 | ContentStyleType
-| text/css
+| 基準となるスタイルシート言語を指定<br>&nbsp;text/css
 ##
 +
 | Refresh
-| 300
-##
-+
-| Jump
-| 60;https://www.teleios.jp/sample/
+| 文書のリロード（再読込み）を指定<br>ex)&nbsp;60;&nbsp;https://www.teleios.jp/sample/
 ##
 +
 | Keywords
-| ホームページ,HTML,CSS,JavaScript
+| 文書のキーワード<br>ex)&nbsp;ホームページ,HTML,CSS,JavaScript
 ##
 +
 | Description
-| 文書にHTML生成に必要なアイテムを追加し、HTMLを生成します。
+| 文書に対する説明を記述
 ##
 +
 | Robots
+#td
+検索エンジンのロボットによる収集を制御する
+#tbl
++
+| INDEX
+| :&nbsp;その文書の収集を許可する
+##
++
+| NOINDEX
+| :&nbsp;その文書の収集を拒否する
+##
++
+| FOLLOW
+| :&nbsp;リンクを辿ることを許可する
+##
++
+| NOFOLLOW
+| :&nbsp;リンクを辿ることを拒否する
+##
++
 | ALL
+| :&nbsp;その文書の収集を許可し、リンクを辿ることも許可する
+##
++
+| NONE
+| :&nbsp;その文書の収集を拒否し、リンクを辿ることも拒否する
+##
+##
+##
 ##
 +
 | Author
-| Takahiro Kotake
+| ページの製作者を設定
 ##
 +
 | ReplyTo
@@ -137,15 +212,15 @@
 ##
 +
 | Copyright
-| teleios
+| コピーライトマーク、著作権者、発行年-更新年 等
 ##
 +
 | Generator
-| hasarius
+| 文書生成に使用したソフト名
 ##
 +
 | Date
-| 2018-08-31T12:00:00+09:00
+| 文書の発行日<br>ex)&nbsp;2018-08-31T12:00:00+09:00
 ##
 +
 ! rowspan="3" Script
@@ -153,11 +228,11 @@
 ##
 +
 | type
-|
+| スクリプトのMIMEタイプを設定
 ##
 +
 | src
-|
+| 読み込むスクリプトファイルを指定
 ##
 +
 ! rowspan="3" Link
@@ -165,45 +240,110 @@
 ##
 +
 | rel
-|
+#td
+現在の文書から見たリンク先の関係をリンクタイプとして半角スペース区切りで複数指定可能
+#tbl
++
+| alternate
+| :&nbsp;代替の文書を示す<br>&nbsp;&nbsp;hreflang属性との併用 … 翻訳版を示す<br>&nbsp;&nbsp;media属性との併用 … 別メディア版を示す
+##
++
+| author
+| :&nbsp;著者情報の文書、または連絡先を示す
+##
++
+| help
+| :&nbsp;ヘルプの文書を示す
+##
++
+| icon
+| :&nbsp;アイコンを示す
+##
++
+| license
+| :&nbsp;著作権情報の文書を示す
+##
++
+| next
+| :&nbsp;一連の文書の中で次の文書を示す
+##
++
+| prefetch
+| :&nbsp;リンク先の事前読み込み
+##
++
+| prev
+| :&nbsp;一連の文書の中で前の文書を示す
+##
++
+| search
+| :&nbsp;関連文書を検索するためのページを示す
+##
++
+| stylesheet
+| :&nbsp;外部スタイルシートを示す<br>&nbsp;&nbsp;alternate との併用 … 代替スタイルシートを示す
+##
+##
+##
 ##
 +
 | href
-|
+| 関連文書類のURL
+##
++
+! BodyClass
+| &lt;none&gt;
+| &lt;body&gt;タグに設定するCSSクラス名
 ##
 +
 ! WriteTargetDir
 | &lt;none&gt;
-| /var/www/html/test
+| 生成後のHTMLファイルの保存先<br>コマンドライン上で"dist"引数をつけた場合はコマンドライン側が優先される
 ##
 +
 ! UseHashFileName
 | &lt;none&gt;
-| 0
+| 生成後に付けるHTMLファイル名にハッシュ値を使用<br>&nbsp;&nbsp;0&nbsp;…&nbsp;無効<br>&nbsp&nbsp;1&nbsp;…&nbsp;有効
 ##
 +
 ! AutoHashFileName
 | &lt;none&gt;
-| 0
+#td
+HTMLファイルに付けるハッシュ値を自動生成
+#tbl
++
+| &nbsp1&nbsp;…&nbsp;MD5 16バイト長
+##
++
+| &nbsp2&nbsp;…&nbsp;MD5 32バイト長
+##
++
+| &nbsp3&nbsp;…&nbsp;SHA1 20バイト長
+##
++
+| &nbsp4&nbsp;…&nbsp;SHA1 40バイト長
+##
+##
+##
 ##
 +
 ! HashedFileName
 | &lt;none&gt;
-|
+| HTMLファイルに付けるハッシュ値を指定
 ##
 +
 ! AttributeValidate
 | &lt;none&gt;
-| 1
+| 生成時の属性チェックの実施の有無<br>&nbsp;&nbsp;0&nbsp;…&nbsp;無効<br>&nbsp&nbsp;1&nbsp;…&nbsp;有効
 ##
 +
 ! ValidateStop
 | &lt;none&gt;
-| 0
+| (未動作)&nbsp;パラメータ検証で検証エラーで動作を停止<br>&nbsp;&nbsp;0&nbsp;…&nbsp;無効<br>&nbsp&nbsp;1&nbsp;…&nbsp;有効
 ##
 +
 ! ShowComment
 | &lt;none&gt;
-| 1
+| 元文書にあるコメントをHTML側に反映<br>&nbsp;&nbsp;0&nbsp;…&nbsp;無効<br>&nbsp&nbsp;1&nbsp;…&nbsp;有効
 ##
 ##
